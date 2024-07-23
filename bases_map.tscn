@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://dsf4uox6x20su"]
+
+[ext_resource type="PackedScene" uid="uid://cw0wafy8lx8c8" path="res://models/bases.glb" id="1_qe3e7"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_tlvya"]
+
+[node name="bases_map" type="Node3D"]
+
+[node name="bases" parent="." instance=ExtResource("1_qe3e7")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="bases"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="bases/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_tlvya")

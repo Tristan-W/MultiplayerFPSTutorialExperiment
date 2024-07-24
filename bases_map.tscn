@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://dsf4uox6x20su"]
 
-[ext_resource type="PackedScene" uid="uid://cw0wafy8lx8c8" path="res://models/bases.glb" id="1_qe3e7"]
+[ext_resource type="PackedScene" uid="uid://cw0wafy8lx8c8" path="res://src_models/bases.glb" id="1_qe3e7"]
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_tlvya"]
 

@@ -4,7 +4,7 @@ signal health_changed(health_value)
 
 @onready var camera = $Camera3D
 @onready var anim_player = $AnimationPlayer
-@onready var muzzle_flash = $Camera3D/Pistol/MuzzleFlash
+
 @onready var raycast = $Camera3D/RayCast3D
 
 var health = 3
@@ -74,8 +74,7 @@ func _physics_process(delta):
 func play_shoot_effects():
 	anim_player.stop()
 	anim_player.play("shoot")
-	muzzle_flash.restart()
-	muzzle_flash.emitting = true
+
 
 @rpc("any_peer")
 func receive_damage():
@@ -88,3 +87,6 @@ func receive_damage():
 func _on_animation_player_animation_finished(anim_name):
 	if anim_name == "shoot":
 		anim_player.play("idle")
+		
+func on_item_picked_up(item:Item):
+	print("I got a ", item.name)

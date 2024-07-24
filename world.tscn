@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://c8oqxmm2w2wvv"]
+[gd_scene load_steps=10 format=3 uid="uid://c8oqxmm2w2wvv"]
 
 [ext_resource type="Script" path="res://world.gd" id="1_6tkge"]
 [ext_resource type="Texture2D" uid="uid://8ka2ui7sq36p" path="res://addons/kenney_particle_pack/circle_05.png" id="3_ehmxv"]
 [ext_resource type="PackedScene" uid="uid://buxk6tjsccfyl" path="res://bases_complete.tscn" id="3_qfho8"]
+[ext_resource type="PackedScene" uid="uid://hxsos6h1b8p0" path="res://weapons/rifle/rifle_pickup.tscn" id="4_itoi4"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_u5pdl"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -121,6 +122,9 @@ spawn_path = NodePath("..")
 
 [node name="bases_complete" parent="." instance=ExtResource("3_qfho8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -8.65372, 0)
+
+[node name="RiflePickup" parent="." instance=ExtResource("4_itoi4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -6.0968, -6.31931)
 
 [connection signal="pressed" from="CanvasLayer/MainMenu/MarginContainer/VBoxContainer/HostButton" to="." method="_on_host_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/MainMenu/MarginContainer/VBoxContainer/JoinButton" to="." method="_on_join_button_pressed"]
